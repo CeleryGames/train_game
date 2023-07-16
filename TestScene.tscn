@@ -1,3 +1,9 @@
-[gd_scene format=3 uid="uid://cui1s8tbbwke"]
+[gd_scene load_steps=2 format=3 uid="uid://cui1s8tbbwke"]
 
-[node name="TestScene" type="Node3D"]
+[ext_resource type="PackedScene" uid="uid://gjfsfipotakk" path="res://TestScene.glb" id="1_kovbh"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="TestScene" parent="." instance=ExtResource("1_kovbh")]
+
+[editable path="TestScene"]
