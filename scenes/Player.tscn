@@ -1,0 +1,82 @@
+[gd_scene load_steps=12 format=3 uid="uid://cooajhv4rdpgt"]
+
+[ext_resource type="Texture2D" uid="uid://bw4k55gptmmdu" path="res://assets/playerCharacterIdle.png" id="1_d2g6w"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ncmbx"]
+radius = 0.475033
+height = 1.9
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pc1vd"]
+atlas = ExtResource("1_d2g6w")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbj4v"]
+atlas = ExtResource("1_d2g6w")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_26b6s"]
+atlas = ExtResource("1_d2g6w")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nltty"]
+atlas = ExtResource("1_d2g6w")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_246km"]
+atlas = ExtResource("1_d2g6w")
+region = Rect2(64, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g1qeq"]
+atlas = ExtResource("1_d2g6w")
+region = Rect2(80, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g7y3u"]
+atlas = ExtResource("1_d2g6w")
+region = Rect2(96, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f4ogj"]
+atlas = ExtResource("1_d2g6w")
+region = Rect2(112, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f4yrl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pc1vd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jbj4v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_26b6s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nltty")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_246km")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g1qeq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g7y3u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f4ogj")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_ncmbx")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+pixel_size = 0.06
+texture_filter = 2
+sprite_frames = SubResource("SpriteFrames_f4yrl")
+animation = &"idle"
