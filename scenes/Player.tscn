@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://cooajhv4rdpgt"]
+[gd_scene load_steps=13 format=3 uid="uid://cooajhv4rdpgt"]
 
 [ext_resource type="Texture2D" uid="uid://bw4k55gptmmdu" path="res://assets/playerCharacterIdle.png" id="1_d2g6w"]
+[ext_resource type="Script" path="res://scenes/Player.gd" id="1_di5kn"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ncmbx"]
 radius = 0.475033
@@ -71,9 +72,13 @@ animations = [{
 }]
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
+script = ExtResource("1_di5kn")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_ncmbx")
+
+[node name="Camera3D" type="Camera3D" parent="CollisionShape3D"]
+transform = Transform3D(1, 0, 0, 0, 0.939693, 0.34202, 0, -0.34202, 0.939693, 0, 2.5, 6)
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 pixel_size = 0.06
