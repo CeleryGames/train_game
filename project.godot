@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Train Game"
+run/main_scene="res://scenes/ForestScene.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -22,6 +23,7 @@ CyclopsAutoload="*res://addons/cyclops_level_builder/cyclops_global_scene.tscn"
 
 project/assembly_name="Train Game"
 
+=======
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/cyclops_level_builder/plugin.cfg")
@@ -56,3 +58,8 @@ down={
 , Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":1,"axis_value":1.0,"script":null)
 ]
 }
+
+[rendering]
+
+renderer/rendering_method.mobile="forward_plus"
+=======
